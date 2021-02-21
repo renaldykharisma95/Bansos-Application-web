@@ -1,0 +1,14 @@
+@media only screen and (max-width: 1400px) {
+    .contents{
+        max-height:300px;
+        overflow:scroll;
+    }
+  }
+
+  @media only screen and (max-width: 2000px) {
+    .contents{
+        max-height:490px;
+        overflow:scroll;
+    }
+  }
+

@@ -1,0 +1,12 @@
+.centered-card{
+    padding-top: 250px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .centered-card{
+        padding-top: 170px;
+    }
+  }
+#card{
+    height: 300px;
+}

@@ -1,0 +1,67 @@
+.logo {
+    height: 100px;
+    margin: 30px 16px;
+    text-align: center;
+    color: white;
+    line-height: 24px;
+  }
+  
+  .site-layout .site-layout-background {
+    background: #fff;
+  }
+
+  .content-layout{
+    background: #fff;
+    margin: 0px 16px;
+    padding: 24px;
+    max-height: 620px;
+  }
+
+  .text-logo{
+    color: white;
+  }
+
+  #sider{
+    height: 100vh;
+  }
+
+  .footer{
+    bottom: 0;
+    text-align: center;
+    position: absolute;
+    padding-left: 300px;
+  }
+
+  @media screen and (max-width: 576px) {
+    .trigger {
+      display: none;
+    }
+
+    .content-layout {
+      background: #fff;
+      margin-left: 100px;
+      padding: 18px;
+    }
+
+    .text-logo{
+      display: none;
+    }
+
+    #sider{
+      position: fixed;
+      z-index: 1;
+    }
+
+    .hr{
+      display: none;
+    }
+
+    .logo{
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    .footer{
+      display: none;
+    }
+}
