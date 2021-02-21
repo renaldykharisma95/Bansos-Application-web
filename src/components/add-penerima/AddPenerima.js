@@ -49,7 +49,8 @@ export default function AddPenerima(){
                 rt: values.rt,
                 rw: values.rw,
                 alasan: values.alasan
-            }));    
+            }));
+            console.log('values: ', values);    
             setIsLoad(isLoad => isLoad = false);
             history.push('/bansos-receiver');
             Modal.success({content: 'Add Data Success'});
