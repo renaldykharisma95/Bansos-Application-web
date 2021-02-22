@@ -37,7 +37,7 @@ const GlobalState = {
             alamat: 'Jalan Panutan Raya',
             rt: '001',
             rw: '006',
-            alasan: '-'
+            alasan: '0'
         }
     ]
 }

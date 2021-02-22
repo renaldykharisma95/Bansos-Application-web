@@ -8,7 +8,7 @@ import {
   UserOutlined
 } from '@ant-design/icons';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router';
+import { withRouter } from 'react-router-dom';
 import {Routes} from '../../Routes';
 
 const { Header, Sider, Content, Footer } = Layout;
@@ -52,7 +52,7 @@ class Base extends React.Component{
     render(){
         const currNamePath = this.search(this.props.location.pathname, Routes).name.toString();
         return(
-            <Layout>
+            <Layout id="test">
                 <Sider width={250} breakpoint="xs" id="sider" trigger={this.state.isTrigger} 
                 onBreakpoint = {this.OnBreakPoint} collapsible collapsed={ this.isMobile ? this.state.collapsed : this.props.collapsed}
                 onCollapse={this.onCollapse}>
@@ -75,8 +75,9 @@ class Base extends React.Component{
                     className="content-layout"
                 >
                     {this.props.children}
+                    <br />
                 </Content>
-                <Footer className="footer">Ant Design ©2018 Created by Ant UED</Footer>
+                <Footer className="footer">Bansos Monitoring ©2021 Created by Ant UED</Footer>
                 </Layout>
             </Layout>
         )

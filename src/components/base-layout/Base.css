@@ -1,4 +1,4 @@
-.logo {
+  .logo {
     height: 100px;
     margin: 30px 16px;
     text-align: center;
@@ -12,9 +12,16 @@
 
   .content-layout{
     background: #fff;
-    margin: 0px 16px;
+    margin: 0px 24px;
     padding: 24px;
-    max-height: 620px;
+  }
+
+  #test{
+    min-height: 100vh;
+  }
+
+  .site-layout{
+    position: relative;  
   }
 
   .text-logo{
@@ -22,14 +29,12 @@
   }
 
   #sider{
-    height: 100vh;
+    display: block;
   }
 
   .footer{
     bottom: 0;
     text-align: center;
-    position: absolute;
-    padding-left: 300px;
   }
 
   @media screen and (max-width: 576px) {

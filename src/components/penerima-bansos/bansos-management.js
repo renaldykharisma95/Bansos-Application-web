@@ -11,6 +11,24 @@ const layout = {
 };
 export default function BansosManagement(){
 
+    const reasons = [{
+        id: 0,
+        title: 'Kehilangan pekerjaan'
+    },
+    {
+        id: 1,
+        title: 'Kepala keluarga terdampak atau korban Covid'
+    },
+    {
+        id: 2,
+        title: 'Tergolong fakir/miskin semenjak sebelum Covid'
+    },
+    {
+        id: 3,
+        title: 'lainnya...'
+    }
+    ];
+
     const columns = [
         {
             title: 'No',
@@ -60,7 +78,10 @@ export default function BansosManagement(){
         },
         {
             title: 'Alasan',
-            dataIndex: 'alasan'
+            dataIndex: 'alasan',
+            render: (val)=>(
+                <span>{reasons.find(el =>el.id === parseInt(val)).title}</span>
+            )
         },
         
     ];

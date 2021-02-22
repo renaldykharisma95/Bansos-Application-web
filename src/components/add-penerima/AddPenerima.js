@@ -1,4 +1,4 @@
-import { Form, Input, InputNumber, Button, Spin, Select, Upload, Modal, Checkbox } from 'antd';
+import { Form, Input, InputNumber, Button, Radio, Spin, Select, Upload, Modal, Checkbox } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
 import { useDispatch, useSelector } from 'react-redux';
 import {BansosDataTable} from '../../base-services/redux-services/Actions';
@@ -14,7 +14,7 @@ wrapperCol: { span: 18, offset: 1 },
 };
 
 const tailLayout = {
-wrapperCol: { offset: 12, span: 12 },
+wrapperCol: { offset: 9, span: 15 },
 };  
 
 const dealLayout = {
@@ -29,7 +29,6 @@ export default function AddPenerima(){
     const [alasan, setAlasan] = useState(0);
     const [isLoad, setIsLoad] = useState(false);
     const history = useHistory();
-
 
     const onFinish = (values) => {
         setIsLoad(isLoad=> isLoad = true);
@@ -107,7 +106,7 @@ export default function AddPenerima(){
     }
 
     return(
-        <div className="contents" style={{}}>
+        <div className="contents">
             <Spin spinning={isLoad}>
                 <Form {...layout} name="control-ref" onFinish={onFinish} onFinishFailed={onFinishFailed}>
                     <Form.Item name="nama" label="Nama" rules={[{ required: true }]}>
@@ -133,7 +132,10 @@ export default function AddPenerima(){
                     <InputNumber />
                     </Form.Item>
                     <Form.Item name="gender" label="Jenis Kelamin" rules={[{ required: true }]}>
-                    <Input style={{width: '100px'}} />
+                    <Radio.Group>
+                        <Radio value={'Laki-laki'}>Laki-Laki</Radio>
+                        <Radio value={'Perempuan'}>Perempuan</Radio>
+                    </Radio.Group>
                     </Form.Item>
                     <Form.Item name="alamat" label="Alamat" rules={[{ required: true }]}>
                     <Input.TextArea style={{width: '400px'}} />
@@ -176,7 +178,11 @@ export default function AddPenerima(){
                         <Checkbox>Saya menyatakan bahwa data yang diisikan adalah benar dan siap mempertanggungjawabkan apabila ditemukan ketidaksesuaian dalam data tersebut.</Checkbox>
                     </Form.Item>
                     <Form.Item {...tailLayout}>
-                    <Button type="primary" htmlType="submit">
+                    <Button type="Danger" style={{width:'120px'}} onClick={()=>history.push('/bansos-receiver')}>
+                        Back
+                    </Button>
+                    &nbsp;
+                    <Button type="primary" style={{width:'120px'}} htmlType="submit">
                         Submit
                     </Button>
                     </Form.Item>
